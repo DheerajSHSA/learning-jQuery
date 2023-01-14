@@ -1,13 +1,5 @@
 $(function () {
-  $("p").animate({
-    "font-size" : "20px"
-  }, 1000);
+  $(".red-box").fadeTo(1000, .2);
+  $(".green-box").delay(1000).fadeTo(1000, .5);
+  $(".blue-box").fadeTo(1000, .8).delay(1000).fadeOut().delay(1000).fadeIn();  
 });
-
-// $(".blue-box").animate({
-//   "margin-left": "200px",
-//   "opacity": "0",
-//   "height": "50px",
-//   "width": "50px",
-//   "margin-top": "25px"
-// }, 1000)
