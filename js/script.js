@@ -1,10 +1,9 @@
-$(function () {
-  $(".blue-box").slideUp(2000);  
-  $(".blue-box").slideDown(2000);
-  $("p").hide();
-  $("p").slideDown(2000);
-});
+$(function() {
+  $(".blue-box").animate({
+    "margin-left" : "+=200px"
+  }, 1000, "linear");
 
-// $(".blue-box").hide();
-// $(".blue-box").show();
-  
+  $(".blue-box").animate({
+    "margin-left" : "-=200px"
+  }, 1000, "linear");
+});
