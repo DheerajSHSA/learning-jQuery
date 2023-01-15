@@ -1,3 +1,3 @@
 $(function () {
-    $("li").replaceWith("<div class='red-box'></div>")
+    $("li").remove();
 });
