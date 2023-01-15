@@ -1,16 +1,13 @@
-$(function() {
-    var gallery = $(".gallery");
-    var images = [
-        "images/laptop-mobile_small.jpg",
-        "images/laptop-on-table_small.jpg",
-        "images/people-office-group-team_small.jpg"
-    ];
+$(function () {
+    // text(), html()
+    // var firstPar = $("p:first");
+    // console.log(firstPar.text());
+    // console.log(firstPar.html());
+    // console.log($("p").html());
 
-    gallery.data("availableImages", images);
-    console.log(gallery.data("availableImages"));
-    gallery.data("name", "awesome gallery");
-    console.log(gallery.data());
-    gallery.removeData("name");
-    console.log(gallery.data());
+    // firstPar.text("<strong>Hello, </strong>World!")
+    // firstPar.html("<strong>Hello, </strong>World!")
 
+    var firstPar = $("p:first");
+    firstPar.text(firstPar.text() + "This is just appended");
 });
