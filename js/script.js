@@ -1,12 +1,17 @@
 $(function () {
-    // To remove all the direct chilren of form element which are not an input of type text or the br 
-    // $("form").children().not("input:text, textarea, br").remove();
+    // attr(), prop(), val()
+    // var specialLink = $("#special-link");
+    // console.log(specialLink.attr("href"));
+    // specialLink.attr("href", "https://myshopeeee.netlify.app/"); 
 
-    // var detachedItem =  $("li").detach();
-    // $("#content").append(detachedItem)
+    // var checkbox = $("input:checkbox");
+    // console.log(checkbox.prop("checked")); 
 
-    // If you want to use the removed Item later use detach because it saves all the event binds that the item has
+    var textInput = $("input:text")
+    $("input:text").val("Dheeraj Kashyap")
+    console.log(textInput.val())
 
-    // $("p:first").empty();
-    // empty() only clears the text and the child element
+    var rangeInput = $("input[type='range']");
+    console.log(rangeInput.val());
+
 });
