@@ -1,3 +1,3 @@
 $(function () {
-    $("ul ul:first").prepend("<li>Hello, World! </li>")
+    $(".red-box").after(('<div class="red-box">Red</div>'))
 });
