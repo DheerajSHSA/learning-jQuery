@@ -5,5 +5,8 @@ $(function () {
     // $("#list").parent().css("background-color", "red")
     // $("#list").siblings().css("background-color", "red")
     // $("#list").prev().css("background-color", "red") 
-    $("#list").next().css("background-color", "red")
-})
+    // $("#list").next().css("background-color", "red")
+    $("li").not(function (index) {
+        return index % 2 === 0;
+    }).css("background-color", "red");
+});
