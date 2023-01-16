@@ -1,28 +1,5 @@
 $(function () {
-    // $("html").on("click keydown", function () {
-    // console.log("Down pressed");
-    // });
-
-    function logEvent() {
-        console.log("Mouse was clicked or key was pressed");
-    }
-
-    $("html").on("click keydown", logEvent);
-
-    var images = [
-        "images/laptop-mobile_small.jpg",
-        "images/laptop-on-table_small.jpg",
-        "images/people-office-group-team_small.jpg"
-    ]
-
-    var i = 0;
-
-    $(".gallery").find("img").on("click", switchGalleryImage)
-
-    function switchGalleryImage() {
-        i = (i + 1) % images.length;
-        $(this).fadeOut(function () {
-            $(this).attr("src", images[i]).fadeIn();
-        });
-    }
+    $("body").on("mouseenter", "li", function(){
+        $(this).css("color", "blue");
+    })
 }); 
