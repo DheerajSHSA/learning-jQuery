@@ -1,9 +1,9 @@
 $(function () {
-    $("#btn-click").click(function (event) {
-        $("#btn-click").css("opacity", "0.5");
+    $("#btn-hover").hover(function(){
+        alert("Button was hovered");
     });
 
-    $(".red-box").click(function() {
-        $(this).fadeTo(500, -.5);
-    });
+    $(".green-box").hover(function(){
+        $(this).text("I was hovered");
+    })
 }); 
