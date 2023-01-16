@@ -1,13 +1,21 @@
 $(function () {
-    $("#btn-click").click({
-        user: "Peter"
-    }, function(event) {
-        greetUser(event.data)
-    });
+    var galleryItems = $(".gallery").find("img");
+    galleryItems.css("width", "33%").css("opacity", "0.7");
 
-    function greetUser(userData)
-    {
-        username = userData.user || "Anonymous";
-        alert("Welcome Back "+username + "!")
-    }
+    galleryItems.mouseenter(function(){
+        $(this).stop().fadeTo(500, 1);
+    })
+    galleryItems.mouseleave(function(){
+        $(this).stop().fadeTo(500, 0.7);
+    })
+
+    galleryItems.click(function() {
+        var source = $(this).attr("src");
+        var image = $("<img>").attr("src", source).css("width", "100%");
+        $(".lightbox").empty().append(image).fadeIn(2000);
+    })
+
+    $(".lightbox").on("click", function(){
+        $(".lightbox").stop().fadeOut();
+    })
 }); 
