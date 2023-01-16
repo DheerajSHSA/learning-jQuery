@@ -1,8 +1,9 @@
 $(function () {
     $("#btn-click").click(function (event) {
-        console.log(event);
-        alert('Button was Clicked');
+        $("#btn-click").css("opacity", "0.5");
     });
 
-    
+    $(".red-box").click(function() {
+        $(this).fadeTo(500, -.5);
+    });
 }); 
