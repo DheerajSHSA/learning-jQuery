@@ -1,19 +1,20 @@
 $(function () {
-    // var blueBox = $(".blue-box");
+    $("html").on("click keydown", function () {
+        console.log("Down pressed");
+    });
 
-    // blueBox.mouseenter(function () {
-    //     $(this).stop().fadeTo(500, .5);
-    // });
+    images = [
+        "images/laptop-mobile_small.jpg",
+        "images/laptop-on-table_small.jpg",
+        "images/people-office-group-team_small.jpg"
+    ]
 
-    // blueBox.mouseleave(function () {
-    //     $(this).stop().fadeTo(500, 1);
-    // });
+    var i = 0;
 
-
-    blueBox.hover(function () {
-        blueBox.stop().fadeTo(500, .5);
-    },
-        function () {
-            blueBox.stop().fadeTo(500, 1);
+    $(".gallery").find("img").on("click", function () {
+        i = (i + 1)% images.length;
+        $(this).fadeOut(function(){
+            $(this).attr("src", images[i]).fadeIn();
         });
+    })
 }); 
